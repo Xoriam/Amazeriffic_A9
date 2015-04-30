@@ -44,7 +44,7 @@ var main = function (toDoObjects) {
 
 			
 						$content.prepend($("<li>").text(results.description));
-						//Alert goes here.
+						window.alert("A new item has been added.");
 					}
 				});
 			} else if ($element.parent().is(":nth-child(2)")) {
@@ -65,7 +65,7 @@ var main = function (toDoObjects) {
 						});
 
 						$content.append($("<li>").text(results.description));
-						//Alert goes here.
+						window.alert("A new item has been added.");
 					}
 				});
 
@@ -139,7 +139,7 @@ var main = function (toDoObjects) {
 							}
 							*/
 						});
-						//Alert goes here.
+						window.alert("A new item has been added.");
 					}
 				});
 
