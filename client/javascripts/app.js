@@ -28,7 +28,7 @@ var main = function (toDoObjects) {
 				//console.log($element[0].className);
 				$content = $("<ul>");
 				for (i = toDos.length-1; i >= 0; i--) {
-					$content.append($("<li>").text(toDos[i]));
+					$content.append($("<li>").text(toDos[i])).slideDown();
 				}
 
 				socket.on("update", function (results){
@@ -41,17 +41,15 @@ var main = function (toDoObjects) {
 						toDos = toDoObjects.map(function (toDo) {
 							return toDo.description;
 						});
-
 			
-						$content.prepend($("<li>").text(results.description));
+						$content.prepend($("<li>").text(results.description)).slideDown();
 						window.alert("A new item has been added.");
 					}
 				});
 			} else if ($element.parent().is(":nth-child(2)")) {
 				$content = $("<ul>");
 				toDos.forEach(function (todo) {
-					$content.append($("<li>").text(todo));
-
+					$content.append($("<li>").text(todo)).slideDown();
 				});
 
 				socket.on("update", function (results){
@@ -64,7 +62,7 @@ var main = function (toDoObjects) {
 							return toDo.description;
 						});
 
-						$content.append($("<li>").text(results.description));
+						$content.append($("<li>").text(results.description)).slideDown();
 						window.alert("A new item has been added.");
 					}
 				});
@@ -102,7 +100,7 @@ var main = function (toDoObjects) {
 
 					tag.toDos.forEach(function (description) {
 						var $li = $("<li>").text(description);
-						$content.append($li);
+						$content.append($li).slideDown();
 					});
 
 					$("main .content").append($tagName);
