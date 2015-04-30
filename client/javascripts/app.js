@@ -1,3 +1,6 @@
+// Client-side code
+/* jshint browser: true, jquery: true, curly: true, eqeqeq: true, forin: true, immed: true, indent: 4, latedef: true, newcap: true, nonew: true, quotmark: double, strict: true, undef: true, unused: true */
+
 var main = function (toDoObjects) {
 	"use strict";
 
@@ -16,8 +19,6 @@ var main = function (toDoObjects) {
 		// create a click handler for this element
 		$element.on("click", function () {
 			var $content,
-				$input,
-				$button,
 				i;
 
 			$(".tabs a span").removeClass("active");
