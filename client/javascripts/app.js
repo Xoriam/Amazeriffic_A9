@@ -125,9 +125,9 @@ var main = function (toDoObjects) {
 						});
 
 						my_tags.forEach(function(tag){
-							
-							if($("." + tag).length > 0){
-								$("." + tag).append($("<li>").text(results.description));
+							/*
+							if($("h3".val).length > 0){
+								$().append($("<li>").text(results.description));
 							} else{
 								var $tagName = $("<h3>").text(tag.name),
 									$content = $("<ul>");
@@ -137,6 +137,7 @@ var main = function (toDoObjects) {
 								$("main .content").append($tagName);
 								$("main .content").append($content);
 							}
+							*/
 						});
 						//Alert goes here.
 					}
