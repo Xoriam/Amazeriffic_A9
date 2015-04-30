@@ -123,19 +123,13 @@ var main = function (toDoObjects) {
 						});
 
 						my_tags.forEach(function(tag){
-							/*
-							if($("h3".val).length > 0){
-								$().append($("<li>").text(results.description));
-							} else{
-								var $tagName = $("<h3>").text(tag.name),
-									$content = $("<ul>");
+							var $tagName = $("<h3>").text(tag),
+								$content = $("<ul>");
 
-								$content.append($("<li>").text(results.description));
+							$content.append($("<li>").text(results.description));
 
-								$("main .content").append($tagName);
-								$("main .content").append($content);
-							}
-							*/
+							$("main .content").append($tagName);
+							$("main .content").append($content);
 						});
 						window.alert("A new item has been added.");
 					}
